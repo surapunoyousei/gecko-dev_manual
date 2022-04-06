@@ -61,6 +61,20 @@ about:configを開いたときに警告を表示するかを設定します。
 true: 表示する
 false: 表示しない
 
+### browser.contentblocking.category
+type: String
+
+ブラウザーがトラッカー・フィンガープリント等に対しての対処の強さを設定します。
+
+デフォルトでは```standard```に設定されており、通常の安定性のある保護をします。```strict```の場合、一層強力な保護を実行しますが、ウェブサイトが破損する可能性があります。```	custom``` の場合、ユーザーが保護の内容を手動で設定できます。
+
+### browser.shell.checkDefaultBrowser
+type: Boolean
+
+ブラウザーが再起動・起動時にブラウザーが既定のブラウザーに設定されているか確認し、設定されていない場合、ポップアップで設定するようなプロンプトを表示します
+
+true: 既定のブラウザーかをチェックし、既定でない場合、プロンプトを表示
+false: 既定のブラウザーかをチェックせず、プロンプトも表示しない。・
 
 ### browser.download.useDownloadDir
 type: Boolean
@@ -226,6 +240,11 @@ type: Boolean
 true: 表示する
 false: 表示しない
 
+
+### browser.uiCustomization.state
+type: String
+
+ブラウザー UI のボタン等のカスタマイズをする設定です。つまり、この値をバックアップすれば、いつでもこのブラウザーのカスタマイズを記憶できます。ただし、アドオンの情報も同時に記憶されるため、アドオンが存在しない場合、動作しません。直接操作すると間違えてしまう可能性の高い値なので操作はしないことをお勧めします。
 
 ### browser.urlbar.update2.engineAliasRefresh
 type: Boolean
